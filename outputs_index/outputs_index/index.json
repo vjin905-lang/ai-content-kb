@@ -1,0 +1,17 @@
+[
+  {
+    "id": "2026-06-21-001",
+    "character": "hu_tao",
+    "prompt": "full prompt text",
+    "negative_prompt": "negative text",
+    "render_profile": "anime_portrait_v1",
+    "lora": [
+      {
+        "name": "hu_tao_lora",
+        "strength": 0.7
+      }
+    ],
+    "image_url": "https://xxx.com/image.png",
+    "created_at": "2026-06-21"
+  }
+]
