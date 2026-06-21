@@ -1,0 +1,26 @@
+{
+  "type": "object",
+  "title": "",
+  "article": "",
+  "positive_prompt": "",
+  "negative_prompt": "",
+  "style_tags": [],
+  "comfyui_payload": {
+    "sampler": "dpmpp_2m",
+    "scheduler": "karras",
+    "steps": 28,
+    "cfg_scale": 7.5,
+    "clip_skip": 2,
+    "width": 512,
+    "height": 768,
+    "lora_list": [
+      {
+        "name": "",
+        "strength_model": 0.7,
+        "strength_clip": 0.7
+      }
+    ]
+  },
+  "required": ["title", "positive_prompt", "negative_prompt", "comfyui_payload"],
+  "additionalProperties": false
+}
