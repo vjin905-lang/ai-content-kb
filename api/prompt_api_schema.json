@@ -1,0 +1,16 @@
+{
+  "request": {
+    "endpoint": "/api/get_composite_prompt",
+    "method": "GET",
+    "params": {
+      "character": "string",
+      "game_series": "genshin/zzz",
+      "scene": "string"
+    }
+  },
+  "response": {
+    "positive": "string",
+    "negative": "string",
+    "comfyui_param": "object"
+  }
+}
