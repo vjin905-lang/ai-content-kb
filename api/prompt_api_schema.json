@@ -4,13 +4,19 @@
     "method": "GET",
     "params": {
       "character": "string",
-      "game_series": "genshin/zzz",
+      "game_series": "string",
       "scene": "string"
     }
   },
   "response": {
     "positive": "string",
     "negative": "string",
-    "comfyui_param": "object"
+    "render_profile": "string",
+    "lora": [
+      {
+        "name": "string",
+        "strength": "number"
+      }
+    ]
   }
 }
