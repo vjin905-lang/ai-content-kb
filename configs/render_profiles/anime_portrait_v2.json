@@ -1,0 +1,34 @@
+{
+  "name": "anime_portrait_v2",
+  "description": "Optimized SD1.5 portrait for 6GB VRAM with LoRA stack (anime screencap + hand fix)",
+  "model": "Counterfeit-V2.5",
+  "loras": [
+    {"name": "anime_screencap_style.safetensors", "strength": 0.6, "type": "style"},
+    {"name": "fix_hand.safetensors", "strength": 1.0, "type": "hand_fix"}
+  ],
+  "render": {
+    "width": 640,
+    "height": 896,
+    "steps": 28,
+    "cfg_scale": 6.0,
+    "sampler": "dpmpp_2m",
+    "scheduler": "karras",
+    "batch_size": 1
+  },
+  "prompt_structure": {
+    "base": "masterpiece, best quality, game cg, soft cel shading",
+    "character": "1girl, solo, Hu Tao, twin tails, long dark brown hair in two high ponytails, red eyes with flower-shaped pupils, plum blossom hair ornament, black waistcoat, white collar, red coat",
+    "pose": "hands resting at sides, natural standing pose, looking at viewer, slight smile",
+    "detail": "detailed hands, perfect fingers, delicate"
+  },
+  "negative": {
+    "quality": "worst quality, low quality, blurry, ugly, disfigured",
+    "anatomy": "bad-hands-5, bad anatomy, deformed hands, extra fingers, missing fingers, fused fingers, mutated hands, extra limbs",
+    "composition": "multiple people, 2girls, hands behind back, cropped, text, watermark, 3d render, stiff pose, rigid"
+  },
+  "known_limitations": {
+    "hands": "SD1.5 architecture fundamentally cannot generate perfect hands. Mitigation: hide hands when possible, use hand LoRA, higher resolution.",
+    "face_consistency": "No identity layer (LoRA-only). For production use, add IP-Adapter with 2D reference art.",
+    "vrma": "6GB VRAM limits resolution to ~640x896. Flux/SDXL not viable."
+  }
+}
